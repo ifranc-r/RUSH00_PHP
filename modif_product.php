@@ -27,14 +27,8 @@ $all_products = get_all_product();
 foreach($all_products as $key => $val){
     if ($val['name'] == $_POST['name']){
         $img = $val['picture']; 
-    }
-    if ($val['name'] == $_POST['name']){
         $price = $val['price']; 
-    }
-    if ($val['name'] == $_POST['name']){
         $desc = $val['describ']; 
-    }
-    if ($val['name'] == $_POST['name']){
         $stock = $val['stock']; 
     }
 }

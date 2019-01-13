@@ -221,8 +221,7 @@ h1 {
   * {box-sizing:border-box}
 
 .slideshow-container {
-    position: absolute;
-  max-width: 16.5vw;
+  max-width: 5vw;
   margin-top:20vh;
 }
 
