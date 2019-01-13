@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once('../mysql_db/connect2db.php');
+print_r($_POST);
 
 if (!$conn) {
     $conn = connecte2data();
@@ -46,3 +47,5 @@ if (isset($_POST["add"])) {
     $qty++;
     $_SESSION["qty"][$i] = $qty;
 }
+$path = $_POST['page'];
+header("location: $path");
