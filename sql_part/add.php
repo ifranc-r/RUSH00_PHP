@@ -3,7 +3,6 @@ function ft_is_null($var){
 	return ($var !== NULL && $var !== FALSE && $var !== '');
 }
 
-
 function main(){
 	$username_db = "inti";
 	$password_db = "rootme";
@@ -13,15 +12,20 @@ function main(){
 	$TABLE_CATEGORIES = "CATEGORIES";
 	$link_mysql = "localhost:3306";
 
+	// connection to data
 	$conn = mysqli_connect($link_mysql, $username_db, $password_db, $database);
 	if (!$conn) {
 		exit ("Connection failed: " . mysqli_connect_error());
 	}
-    if (isset($_POST['login']) && isset($_POST['oldpw']) && isset($_POST['newpw']) && isset($_POST['modif']) && $_POST['modif'] == "Modifier son mot de passe") {
-		list($login, $oldpw, $newpw) = array($_POST["login"], $_POST["newpw"], $_POST["newpw"]);
-		// SQL check line for check
-		$check_pass = "SELECT * FROM $TABLE_USERS WHERE login='$login' AND password=PASSWORD('$oldpw')";
-		// check if user exist
+	// check Post correct
+	if ($_POST["add"] == "Ajouter un article" && ft_is_null($_POST["name"]) && ft_is_null($_POST["price"]) && ft_is_null($_POST["sexe"]) && ft_is_null($_POST["vetement"])){
+		// create var of user and pass
+		list($name, $price) = array($_POST["name"], $_POST["price"], $_POST["sexe"], $_POST["vetement"]);
+        // SQL check line for check
+        // WAITING FOR CATEGORIES
+		$check_pass = "SELECT * FROM $TABLE_USERS WHERE login='$login' AND password=PASSWORD('$password')";
+        // check if user exist
+        //WAITING FOR CATEGORIES
 		if ($result = mysqli_query($conn, $check_pass)){
 			if (mysqli_num_rows($result) == 0){
 				// create user on SQL line

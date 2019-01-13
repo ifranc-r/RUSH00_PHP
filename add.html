@@ -1,15 +1,3 @@
-<?php
-if (isset($_POST['add']) == 'Ajouter un article'){    
-    print_r($_POST);
-    echo $_POST['name'];
-    foreach ($_POST as $key => $val){
-        if (isset($key) && $key !== 'add'){
-            $to_add[$key] = $_POST[$key];
-        }
-    }
-    print_r($to_add);
-}
-?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -61,7 +49,7 @@ if (isset($_POST['add']) == 'Ajouter un article'){
     <div id="middle-col">
             <div class="login-page">
                     <div class="form">
-                        <form class="login-form" action="#" method="POST">
+                        <form class="login-form" ction="sql_part/add.php" method="POST">
                             <p>Nom de l'article : </p><input type="text" name="name">
                             <p>Categories : </p>Homme<input type="checkbox" name="sexe" value="homme">
                             Femme<br><input type="checkbox" name="sexe" value="femme"> 
