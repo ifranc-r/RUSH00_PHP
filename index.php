@@ -23,6 +23,7 @@ function get_all_product(){
     mysqli_free_result($result);
 }
 $all_products = get_all_product();
+print_r($all_products);
 $i = 0;
 ?>
 
@@ -90,7 +91,14 @@ $i = 0;
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
                         <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
+<<<<<<< HEAD
                         <input type ="hidden" name="name" value="<?php echo $all_products[$i]['name']; $i++;?>">
+=======
+                        <input type="hidden" name="name" value="<?php echo $all_products[$i]['name'];?>">
+
+                        <input name="id_product" type="hidden" value="<?php echo $all_products[$i]['id']; $i++;?>">
+                        <input name="product_price" type="hidden" value="<?php echo $all_products[$i]['price']; $i++;?>">
+>>>>>>> my_sql_start
                         <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
@@ -102,7 +110,13 @@ $i = 0;
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
                         <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
+<<<<<<< HEAD
                         <input type ="hidden" name="name" value="<?php echo $all_products[$i]['name']; $i++;?>">
+=======
+                        <input name="name" value="<?php echo $all_products[$i]['name'];?>">
+                        <input name="id_product" type="hidden" value="<?php echo $all_products[$i]['id']; $i++;?>">
+                        <input name="product_price" type="hidden" value="<?php echo $all_products[$i]['price']; $i++;?>">
+>>>>>>> my_sql_start
                         <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
@@ -113,7 +127,13 @@ $i = 0;
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
                         <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
+<<<<<<< HEAD
                         <input type ="hidden" name="name" value="<?php echo $all_products[$i]['name']; $i++;?>">
+=======
+                        <input name="name" value="<?php echo $all_products[$i]['name'];?>">
+                        <input name="id_product" type="hidden" value="<?php echo $all_products[$i]['id']; $i++;?>">
+                        <input name="product_price" type="hidden" value="<?php echo $all_products[$i]['price']; $i++;?>">
+>>>>>>> my_sql_start
                         <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
@@ -128,7 +148,13 @@ $i = 0;
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
                         <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
+<<<<<<< HEAD
                         <input type ="hidden" name="name" value="<?php echo $all_products[$i]['name']; $i++;?>">
+=======
+                        <input name="name" value="<?php echo $all_products[$i]['name'];?>">
+                        <input name="id_product" type="hidden" value="<?php echo $all_products[$i]['id']; $i++;?>">
+                        <input name="product_price" type="hidden" value="<?php echo $all_products[$i]['price']; $i++;?>">
+>>>>>>> my_sql_start
                         <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
@@ -139,7 +165,13 @@ $i = 0;
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
                         <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
+<<<<<<< HEAD
                         <input type ="hidden" name="name" value="<?php echo $all_products[$i]['name']; $i++;?>">
+=======
+                        <input name="name" value="<?php echo $all_products[$i]['name'];?>">
+                        <input name="id_product" type="hidden" value="<?php echo $all_products[$i]['id']; $i++;?>">
+                        <input name="product_price" type="hidden" value="<?php echo $all_products[$i]['price']; $i++;?>">
+>>>>>>> my_sql_start
                         <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
@@ -150,7 +182,13 @@ $i = 0;
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
                         <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
+<<<<<<< HEAD
                         <input type ="hidden" name="name" value="<?php echo $all_products[$i]['name']; $i++;?>">
+=======
+                        <input name="name" value="<?php echo $all_products[$i]['name'];?>">
+                        <input name="id_product" type="hidden" value="<?php echo $all_products[$i]['id']; $i++;?>">
+                        <input name="product_price" type="hidden" value="<?php echo $all_products[$i]['price']; $i++;?>">
+>>>>>>> my_sql_start
                         <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
@@ -164,7 +202,13 @@ $i = 0;
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
                         <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
+<<<<<<< HEAD
                         <input type ="hidden" name="name" value="<?php echo $all_products[$i]['name']; $i++;?>">
+=======
+                        <input name="name" value="<?php echo $all_products[$i]['name'];?>">
+                        <input name="id_product" type="hidden" value="<?php echo $all_products[$i]['id']; $i++;?>">
+                        <input name="product_price" type="hidden" value="<?php echo $all_products[$i]['price']; $i++;?>">
+>>>>>>> my_sql_start
                         <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
@@ -175,7 +219,13 @@ $i = 0;
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
                         <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
+<<<<<<< HEAD
                         <input type ="hidden" name="name" value="<?php echo $all_products[$i]['name']; $i++;?>">
+=======
+                        <input name="name" value="<?php echo $all_products[$i]['name'];?>">
+                        <input name="id_product" type="hidden" value="<?php echo $all_products[$i]['id']; $i++;?>">
+                        <input name="product_price" type="hidden" value="<?php echo $all_products[$i]['price']; $i++;?>">
+>>>>>>> my_sql_start
                         <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
@@ -185,7 +235,13 @@ $i = 0;
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
                         <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
+<<<<<<< HEAD
                         <input type ="hidden" name="name" value="<?php echo $all_products[$i]['name']; $i++;?>">
+=======
+                        <input name="name" value="<?php echo $all_products[$i]['name'];?>">
+                        <input name="id_product" type="hidden" value="<?php echo $all_products[$i]['id']; $i++;?>">
+                        <input name="product_price" type="hidden" value="<?php echo $all_products[$i]['price']; $i++;?>">
+>>>>>>> my_sql_start
                         <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
@@ -198,7 +254,13 @@ $i = 0;
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
                         <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
+<<<<<<< HEAD
                         <input type ="hidden" name="name" value="<?php echo $all_products[$i]['name']; $i++;?>">
+=======
+                        <input name="name" value="<?php echo $all_products[$i]['name'];?>">
+                        <input name="id_product" type="hidden" value="<?php echo $all_products[$i]['id']; $i++;?>">
+                        <input name="product_price" type="hidden" value="<?php echo $all_products[$i]['price']; $i++;?>">
+>>>>>>> my_sql_start
                         <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
@@ -209,7 +271,13 @@ $i = 0;
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
                         <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
+<<<<<<< HEAD
                         <input type ="hidden" name="name" value="<?php echo $all_products[$i]['name']; $i++;?>">
+=======
+                        <input name="name" value="<?php echo $all_products[$i]['name'];?>">
+                        <input name="id_product" type="hidden" value="<?php echo $all_products[$i]['id']; $i++;?>">
+                        <input name="product_price" type="hidden" value="<?php echo $all_products[$i]['price']; $i++;?>">
+>>>>>>> my_sql_start
                         <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
@@ -220,7 +288,13 @@ $i = 0;
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
                         <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
+<<<<<<< HEAD
                         <input type ="hidden" name="name" value="<?php echo $all_products[$i]['name']; $i++;?>">
+=======
+                        <input name="name" value="<?php echo $all_products[$i]['name'];?>">
+                        <input name="id_product" type="hidden" value="<?php echo $all_products[$i]['id']; $i++;?>">
+                        <input name="product_price" type="hidden" value="<?php echo $all_products[$i]['price']; $i++;?>">
+>>>>>>> my_sql_start
                         <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
@@ -233,7 +307,13 @@ $i = 0;
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
                         <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
+<<<<<<< HEAD
                         <input type ="hidden" name="name" value="<?php echo $all_products[$i]['name']; $i++;?>">
+=======
+                        <input name="name" value="<?php echo $all_products[$i]['name'];?>">
+                        <input name="id_product" type="hidden" value="<?php echo $all_products[$i]['id']; $i++;?>">
+                        <input name="product_price" type="hidden" value="<?php echo $all_products[$i]['price']; $i++;?>">
+>>>>>>> my_sql_start
                         <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
@@ -244,7 +324,13 @@ $i = 0;
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
                         <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
+<<<<<<< HEAD
                         <input type ="hidden" name="name" value="<?php echo $all_products[$i]['name']; $i++;?>">
+=======
+                        <input name="name" value="<?php echo $all_products[$i]['name'];?>">
+                        <input name="id_product" type="hidden" value="<?php echo $all_products[$i]['id']; $i++;?>">
+                        <input name="product_price" type="hidden" value="<?php echo $all_products[$i]['price']; $i++;?>">
+>>>>>>> my_sql_start
                         <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
@@ -255,7 +341,13 @@ $i = 0;
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
                         <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
+<<<<<<< HEAD
                         <input type ="hidden" name="name" value="<?php echo $all_products[$i]['name']; $i++;?>">
+=======
+                        <input name="name" value="<?php echo $all_products[$i]['name'];?>">
+                        <input name="id_product" type="hidden" value="<?php echo $all_products[$i]['id']; $i++;?>">
+                        <input name="product_price" type="hidden" value="<?php echo $all_products[$i]['price']; $i++;?>">
+>>>>>>> my_sql_start
                         <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
