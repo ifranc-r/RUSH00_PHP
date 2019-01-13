@@ -38,9 +38,9 @@ function create_tab_orders($conn)
 	$sql = "CREATE TABLE orders (
 	  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
 	  `user` varchar(100) NOT NULL,
-	  `adress` varchar(50) DEFAULT NULL,
-	  `email` varchar(50) DEFAULT NULL,
-	  `id_product` varchar(50) DEFAULT NULL,
+	  `id_product` int(10) DEFAULT NULL,
+	  `num_product` int(10) DEFAULT NULL,
+
 	  PRIMARY KEY (`id`)
 	);";
 	$req = mysqli_query($conn, $sql);
