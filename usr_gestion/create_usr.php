@@ -26,9 +26,9 @@ function main(){
 								VALUES ('$login', PASSWORD('$password'), 0)";
 				// apply SQL line on database
 				if (mysqli_query($conn, $insert_user)){
+					header('location: ../index.php');
 					echo ("User is create\n");
 					// send user to home page
-					// header("Location: index.html")
 				}
 				else
 					echo ("ERROR\n");
