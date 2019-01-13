@@ -13,7 +13,6 @@ function main(){
 	$TABLE_CATEGORIES = "CATEGORIES";
 	$link_mysql = "localhost:3306";
 
-
 	// connection to data
 	$conn = mysqli_connect($link_mysql, $username_db, $password_db, $database);
 	if (!$conn) {

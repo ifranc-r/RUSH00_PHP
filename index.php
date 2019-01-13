@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Mon panier</title>
+    <title>Our shop</title>
     <link rel = "stylesheet"
     type = "text/css"
     href = "style.css" />
@@ -11,6 +11,7 @@
     <div id="top_bar">
     </div>
     <div id="full_body">
+        
                     <div class="header">
                             <ul class="menu">
                                 <li class="dropdown"><span>Mon compte</span>
@@ -31,7 +32,11 @@
                                         <li><a href="#">Commander</a></li>
                                     </ul>
                                 </li>
-                            </ul>
+                                <?php if ($_SESSION['admin'] === 1) : ?> {
+                                    <li class='dropdown'><span>Back-end</span><ul class='features-menu'><li><a href="back.html">Gestion admin</a></li></ul></li>
+                                    <?php endif; ?>        
+                                </ul>
+                                </li>
                         </div>
     
     

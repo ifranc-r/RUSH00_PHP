@@ -31,7 +31,7 @@
                                 </li>
                                 <li class="dropdown"><span>Categories</span>
                                     <ul class="features-menu">
-                                        <li><a href="add_article.html">Ajouter des articles</a></li>
+                                        <li><a href="add.html">Ajouter des articles</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown"><span>Statistiques</span>
@@ -49,7 +49,7 @@
     <div id="middle-col">
             <div class="login-page">
                     <div class="form">
-                        <form class="login-form" ction="sql_part/add.php" method="POST">
+                        <form class="login-form" action="sql_part/add.php" method="POST">
                             <p>Nom de l'article : </p><input type="text" name="name">
                             <p>Categories : </p>Homme<input type="checkbox" name="sexe" value="homme">
                             Femme<br><input type="checkbox" name="sexe" value="femme"> 
@@ -59,8 +59,7 @@
                             <p>Prix de l'article : </p><input type="number" name="price" min="1" max="999">
                             <!-- <p> Photo : </p> -->
                             <p>Description de l'article : </p><input type="text" name="desc">
-
-                            <input id = "login" type="submit" name="add" value ="Ajouter un article">
+                            <input id = "login" target="" type="submit" name="add" value ="Ajouter un article">
                         </form>
                     </div>
                 </div>
