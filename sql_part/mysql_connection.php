@@ -14,17 +14,17 @@ $conn = mysqli_connect("localhost:3306", $username, $password, $database);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-$password = hash("SHA256", "rootme");
+// $password = hash("SHA256", "rootme");
 
 // create user
-// $insert_user = "INSERT INTO USERS (firstname, lastname, email, login, password, admin)
-// VALUES ('root','root','root@root','root', '$password', 1)";
-
+$insert_user = "INSERT INTO USERS (firstname, lastname, email, login, password, admin)
+VALUES ('root','root','root@root','root', PASSWORD('root'), 1)";
+mysqli_query($conn, $insert_user);
 // modify
-$modify = "UPDATE users
-			SET password=PASSWORD('toto')
-			WHERE login='titi'";
-mysqli_query($conn, $modify );
+// $modify = "UPDATE users
+// 			SET password=PASSWORD('toto')
+// 			WHERE login='titi'";
+// mysqli_query($conn, $modify );
 
 // check_password
 // $check_pass = "SELECT * FROM users WHERE login='franc-r' AND password=PASSWORD('root33mew')";
@@ -43,7 +43,6 @@ if ($result = mysqli_query($conn, $check_pass)){
     if (mysqli_num_rows($result) !== 0){
     	$row = mysqli_fetch_assoc($result);
     	print_r($row);
-    	echo hash("sha256", "toto");
     	echo "pass is good";
     }
     else

@@ -78,6 +78,5 @@ if (isset($_POST['add']) == 'Ajouter un article'){
                 </div>
     </div>
 </div>
-
     </body>
 </html>                     
