@@ -15,10 +15,10 @@ function field_db_products()
 	VALUES ('belle chaussure beige', '40', 'femme', 'chaussures','30', 'belle chaussures de sport', './img/basket femme beige.jpg')";
 	mysqli_query($conn, $field);
 		$field = "INSERT INTO products (name, price, sexe, types, stock, describ, picture)
-	VALUES ('belle chaussure femme', '40', 'femme', 'chaussures','30', 'belle chaussures de sport', './img/basket femme noir.jpg')";
+	VALUES ('belle chaussure 2', '40', 'femme', 'chaussures','30', 'belle chaussures de sport', './img/basket femme noir.jpg')";
 	mysqli_query($conn, $field);
 		$field = "INSERT INTO products (name, price, sexe, types, stock, describ, picture)
-	VALUES ('belle chaussure femme', '40', 'femme', 'chaussures','30', 'belle chaussures de sport', './img/basket femme grises.jpg')";
+	VALUES ('belle chaussure 3', '40', 'femme', 'chaussures','30', 'belle chaussures de sport', './img/basket femme grises.jpg')";
 	mysqli_query($conn, $field);
 
 	$field = "INSERT INTO products (name, price, sexe, types, stock, describ, picture)
@@ -44,7 +44,7 @@ function field_db_products()
 	VALUES ('chaussures nice', '40', 'femme', 'chaussures','30', 'belle chaussure de sport', './img/basket femme.jpg')";
 	mysqli_query($conn, $field);
 	$field = "INSERT INTO products (name, price, sexe, types, stock, describ, picture)
-	VALUES ('chaussurescozy', '40', 'femme', 'chaussures','30', 'belle chaussure de sport', './img/basket femme.jpg')";
+	VALUES ('chaussures cozy', '40', 'femme', 'chaussures','30', 'belle chaussure de sport', './img/basket femme.jpg')";
 	mysqli_query($conn, $field);
 	$field = "INSERT INTO products (name, price, sexe, types, stock, describ, picture)
 	VALUES ('sneakers femelle', '40', 'homme', 'chaussures','30', 'belle chaussure de sport', './img/vans femme rouge.jpg')";
