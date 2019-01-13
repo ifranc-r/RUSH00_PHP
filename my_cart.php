@@ -65,9 +65,7 @@ mysqli_close($conn);
     <div class="form">
                         <form class="login-form" action="cart_gestion/manage_cart.php" method="POST">
                         <input id = "login" type="submit" name="submit" value ="Supprimer mon panier">
-                        
-                  
-                        <input id = "login" type="submit" name="del" value ="Nom de l'article ">
+                
                                 </form>
                                 </div>
     </div>
