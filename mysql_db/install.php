@@ -3,6 +3,8 @@
 include ("create_tab_db.php");
 include ("db_function.php");
 include ("connect2db.php");
+include ("field_data.php");
+
 
 function connect_2_mysql()
 {
