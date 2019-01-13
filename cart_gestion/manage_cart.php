@@ -10,7 +10,6 @@ if (!$conn) {
 $check_price = "SELECT price FROM products";
 print_r($check_price);
 $check_name = "SELECT name FROM products";
-$check_type = "SELECT types FROM products";
 mysqli_close($conn);
 
 $_SESSION["total"] = 0;
@@ -39,4 +38,11 @@ if (isset($_POST["del"])){
   {
     $_SESSION[$check_price][$i] = $check_price[$i] * $qty;
   }
+}
+
+if (isset($_POST["add"])) {
+    $i = $_POST["add"];
+    $qty = $_SESSION["qty"][$i];
+    $qty++;
+    $_SESSION["qty"][$i] = $qty;
 }

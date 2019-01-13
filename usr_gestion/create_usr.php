@@ -12,8 +12,6 @@ function create_usr(){
 	if (!$conn) {
 		exit ("Connection failed: " . mysqli_connect_error());
 	}
-	// check Post correct
-	print_r($_POST);
 	if ($_POST["submit"] == "Creer un compte" && ft_is_null($_POST["login"]) && ft_is_null($_POST["password"])){
 		// create var of user and pass
 		list($login, $password) = array($_POST["login"], $_POST["password"]);

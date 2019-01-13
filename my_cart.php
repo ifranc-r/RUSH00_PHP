@@ -1,6 +1,6 @@
 <?php 
 session_start();
-require_once('../mysql_db/connect2db.php');
+require_once('./mysql_db/connect2db.php');
 
 if (!$conn) {
     $conn = connecte2data();
@@ -64,13 +64,14 @@ mysqli_close($conn);
      -->
     <div id="middle-col">
     <div class="form">
-                        <form class="login-form" action="cart_gestion/my_cart.php" method="POST">
+                        <form class="login-form" action="cart_gestion/manage_cart.php" method="POST">
                         <input id = "login" type="submit" name="submit" value ="Supprimer mon panier">
                         
                         <?php foreach($check_name as $key => $val) : ?>
                             <div class="row">
                             <div class="column">
                               <img src="img_snow.jpg" alt="Snow" style="width:100%">
+                            </div>
                             </div>
                             <?php endforeach; ?>
                         
