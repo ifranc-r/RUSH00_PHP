@@ -22,7 +22,8 @@ if (isset($_POST['submit'])  && $_POST['submit'] == "Supprimer mon panier" ){
     unset($_SESSION["qty"]);
     unset($_SESSION["amounts"]);
     unset($_SESSION["total"]); 
-    unset($_SESSION["cart"]); 
+    unset($_SESSION["cart"]);
+    echo "Panier supprimé\n";
 }
 
 if (isset($_POST["del"])){

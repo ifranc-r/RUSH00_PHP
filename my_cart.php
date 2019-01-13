@@ -2,7 +2,7 @@
 session_start();
 require_once('./mysql_db/connect2db.php');
  $conn = connecte2data();
-if ($conn) {
+if (!$conn) {
     exit("Connection failed: " . mysqli_connect_error());
 }
 
@@ -66,14 +66,7 @@ mysqli_close($conn);
                         <form class="login-form" action="cart_gestion/manage_cart.php" method="POST">
                         <input id = "login" type="submit" name="submit" value ="Supprimer mon panier">
                         
-                        <?php foreach($check_name as $key => $val) : ?>
-                            <div class="row">
-                            <div class="column">
-                              <img src="img_snow.jpg" alt="Snow" style="width:100%">
-                            </div>
-                            </div>
-                            <?php endforeach; ?>
-                        
+                  
                         <input id = "login" type="submit" name="del" value ="Nom de l'article ">
                                 </form>
                                 </div>
