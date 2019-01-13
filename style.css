@@ -1,0 +1,145 @@
+/*
+**  body
+*/
+
+body {
+    background-color: white;
+    max-width: 100%;
+    max-height: 100%;
+    }
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+#top_bar {
+  border-radius: 10px;;
+  background: lightskyblue;
+  margin-top:2vw;
+  margin-left:2.5vw;
+  width: 95vw;
+  height: 13.5vh;
+  box-shadow: 1px 2.5px 2.5px black;
+  background-image :url('img/turner.jpg');
+}
+
+#full_body{
+    margin-top:1vw;
+    margin-left:2.5vw;
+}
+#left-col {
+    float:left;
+    border-radius: 10px;;
+    background: lightskyblue;
+    width: 10vw;
+    height: 75vh;
+    box-shadow: 1px 2.5px 2.5px black;
+}
+
+#middle-col {
+    border-radius: 10px;;
+    background: lightskyblue;
+    width: 83vw;
+    margin-left : 12vw;
+    height: 75vh;
+    box-shadow: 1px 2.5px 2.5px black;
+}
+
+
+#right-col {
+    float:right;
+    border-radius: 10px;
+    background: lightskyblue;
+    margin-top: -64vh;
+    margin-right: 12.7vw;
+    width: 5.5vw;
+    height: 45.5vh;
+    box-shadow: 5px 10px 10px #070707;
+}
+
+/*
+**  MENU 
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+      height: 12vh;
+      font-size: 2vh;
+      font-size: 1vw;
+      font-family: sans-serif;
+      color: #5D6063;
+  }
+  
+  a{
+      color: #5D6063;
+      text-decoration: none;
+      text-align: center;
+  }
+  
+  
+  .header {
+      position: fixed;
+      display: flex;
+      justify-content: space-between;
+      width: 95vw;
+      padding: 2vh 1.3vw 2vh 1.3vw;
+      border-radius:5px;
+      background: #D6E9FE;
+  }
+  
+  .menu > li {
+      display: inline;
+      margin-right: 2vw;
+  }
+  
+  .menu > li:last-of-type {
+      margin-right:0;
+  }
+  
+  .dropdown {
+      position: relative;
+  }
+  .dropdown > span{
+      position: relative;
+      z-index: 2;
+      cursor: pointer;
+  }
+  
+  .dropdown:hover .features-menu{
+      display: flex; 
+      flex-direction: column;
+      background: #B2D6FF;
+      border-radius: 5px;
+      padding-top: 4.5vh;
+      position: absolute;
+      top: -1.85vh;
+      left: -2vh;
+      z-index: 1;
+  }
+  
+  .features-menu {
+      display: none;
+      width:8vw;
+  }
+  
+  .features-menu li{
+      list-style-position: outside;
+      list-style-type: none;
+      list-style: none;
+      border-bottom: 2px solid #FFF;
+      padding: 2vh 1.3vw 2vh 1.3vw;
+      width: 100%;
+  }
+  .features-menu li:hover {
+      background-color: #D6E9FE;
+  }
+  
+  .features-menu li:last-of-type {
+      border-bottom: none;
+  }
