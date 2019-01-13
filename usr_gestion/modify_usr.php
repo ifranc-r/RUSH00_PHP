@@ -6,7 +6,7 @@ function ft_is_null($var){
 }
 
 
-function create_usr(){
+function modify_usr(){
 	// connection to data
 	$conn = connecte2data();
 	if (!$conn) {
@@ -27,9 +27,9 @@ function create_usr(){
 								VALUES ('$login', PASSWORD('$password'), 0)";
 				// apply SQL line on database
 				if (mysqli_query($conn, $insert_user)){
-					header('location: ../index.php');
 					echo ("User is create\n");
 					// send user to home page
+					header("Location: index.html")
 				}
 				else
 					echo ("ERROR\n");
@@ -48,5 +48,5 @@ function create_usr(){
 	mysqli_close($conn);
 }
 
-create_usr();
+modify_usr();
 ?>
