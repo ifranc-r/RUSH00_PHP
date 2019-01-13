@@ -22,7 +22,7 @@ function create_tab_products($conn)
 	  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
 	  `name` varchar(100) NOT NULL,
 	  `price` double unsigned NOT NULL,
-	  `sexe` bit(1) NOT NULL,
+	  `sexe` varchar(50) NOT NULL,
 	  `types` varchar(50) DEFAULT NULL,
 	  `picture` varchar(50) DEFAULT NULL,
 	  `stock` int(10) unsigned DEFAULT 10,
