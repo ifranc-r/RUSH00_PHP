@@ -29,6 +29,8 @@ function install_db(){
 	create_tab_usr($con_to_db);
 	create_tab_products($con_to_db);
 	create_tab_orders($con_to_db);
+	field_db_users();
+	field_db_products();
 }
-install_db();
+install_db_products();
 ?>
