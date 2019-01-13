@@ -3,6 +3,8 @@
 include ("create_tab_db.php");
 include ("db_function.php");
 include ("connect2db.php");
+include ("field_data.php");
+
 
 function connect_2_mysql()
 {
@@ -32,5 +34,5 @@ function install_db(){
 	field_db_users();
 	field_db_products();
 }
-install_db_products();
+install_db();
 ?>

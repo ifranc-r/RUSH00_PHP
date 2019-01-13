@@ -2,7 +2,7 @@
 
 require_once('../mysql_db/connect2db.php');
 
-function field_db()
+function field_db_products()
 {
 	$conn = connecte2data();
 	if (!$conn)
@@ -50,5 +50,17 @@ function field_db()
 	VALUES ('sneakers femelle', '40', 'homme', 'chaussures','30', 'belle chaussure de sport', './img/vans femme rouge.jpg')";
 	mysqli_query($conn, $field);
 }
-field_db();
+
+function field_db_users()
+{
+	$conn = connecte2data();
+	if (!$conn)
+		exit ("Connection failed: " . mysqli_connect_error());
+	$field = "INSERT INTO USERS (login, password, admin)
+					VALUES ('inti', PASSWORD('inti'), 0)";
+	mysqli_query($conn, $field);
+	$field = "INSERT INTO USERS (login, password, admin)
+					VALUES ('joseph', PASSWORD('joseph'), 0)";
+	mysqli_query($conn, $field);
+}
 ?>
