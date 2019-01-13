@@ -1,5 +1,47 @@
 <?php
 session_start();
+require_once('./mysql_db/connect2db.php');
+
+function get_all_product(){
+	$conn = connecte2data();
+	if (!$conn)
+		exit ("Connection failed: " . mysqli_connect_error());
+	$sql = "SELECT * FROM products";
+	// check if user exist
+	if ($result = mysqli_query($conn, $sql)){
+		if (mysqli_num_rows($result) > 0) {
+			$all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
+			return $all_products;
+		} 
+		else {
+			echo "0 products in database\n";
+			return false;
+		}
+	}
+	else{
+		echo "error\n";
+		return false;
+	}
+	mysqli_free_result($result);
+}
+$all_products = get_all_product();
+foreach($all_products as $key => $val){
+    if ($val['name'] == $_POST['name']){
+        $img = $val['picture']; 
+    }
+    if ($val['name'] == $_POST['name']){
+        $price = $val['price']; 
+    }
+    if ($val['name'] == $_POST['name']){
+        $desc = $val['describ']; 
+    }
+    if ($val['name'] == $_POST['name']){
+        $stock = $val['stock']; 
+    }
+}
+$i = 0;
+print_r($all_products);
+print_r($img);
 ?>
 
 <!DOCTYPE html>
@@ -59,22 +101,40 @@ session_start();
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
   <img src="img/basket femme rouge.jpg" style="width:100%">
-  <div class="text">basket femme rouge</div>
+  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'$</p>';?></div>
+  <div class="form">
+                        <form class="login-form" action="cart_gestion/manage_cart.php" method="POST">
+                        <input name="name" value="<?php $all_products[$i++]['name']?>">
+                        <input name="contentTwo" value="Mouse">
+                        <input id = "login" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
+                                </div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
   <img src="img/doudoune femme.jpg .jpg" style="width:100%">
-  <div class="text">doudoune femme</div>
+  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'$</p>';?></div>
+  <div class="form">
+                        <form class="login-form" action="cart_gestion/manage_cart.php" method="POST">
+                        <input name="name" value="<?php $all_products[$i++]['name']?>">
+                        <input name="contentTwo" value="Mouse">
+                        <input id = "login" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
+                                </div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 3</div>
-  <img src="img/chaussures femme noir.jpg" style="width:100%">
-  <div class="text">chaussures femme noir</div>
+  <?php echo '<img src="img/'.$all_products[$i]['name'].'jpg" style="width:100%">';?>
+  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'$</p>';?></div>
+  <div class="form">
+                        <form class="login-form" action="cart_gestion/manage_cart.php" method="POST">
+                        <input name="name" value="<?php $all_products[$i++]['name']?>">
+                        <input name="contentTwo" value="Mouse">
+                        <input id = "login" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
+                                </div>
 </div>
 
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>

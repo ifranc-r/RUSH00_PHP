@@ -24,7 +24,22 @@ function get_all_product(){
 	mysqli_free_result($result);
 }
 $all_products = get_all_product();
+foreach($all_products as $key => $val){
+    if ($val['name'] == $_POST['name']){
+        $img = $val['picture']; 
+    }
+    if ($val['name'] == $_POST['name']){
+        $price = $val['price']; 
+    }
+    if ($val['name'] == $_POST['name']){
+        $desc = $val['describ']; 
+    }
+    if ($val['name'] == $_POST['name']){
+        $stock = $val['stock']; 
+    }
+}
 print_r($all_products);
+print_r($img);
 ?>
 
 <!DOCTYPE HTML>
@@ -68,7 +83,17 @@ print_r($all_products);
                             </ul>
                         </div>
     <div id="middle-col">
+        <div class = "modif_article">
+            <p class ="article"> Nom de l'article : </p><br>
+            <?php echo '<p class="article">'.$_POST['name'].'</p>';?>
+            <?php echo '<img class="article_pict" src="'.$img.'" alt="'.$img.'">';?>
+            <?php echo '<p class="article">'.$price.' $</p>';?>
+            <?php echo '<p class="article">'.$desc.' $</p>';?><br>
+            <p class ="article"> Stock actuel : </p><br>
+            <?php echo '<p class="article">'.$stock.'</p>';?>
+            
 
+</div>
             <div class="login-page">
                     <div class="form">
                         <form class="login-form" action="modif_product.php" method="POST">
@@ -86,6 +111,7 @@ print_r($all_products);
                         </form>
                     </div>
                 </div>
+                
     </div>
 </div>
     </body>
