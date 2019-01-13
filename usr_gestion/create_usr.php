@@ -1,4 +1,5 @@
 <?php
+require_once('install.php');
 function ft_is_null($var){
 	return ($var !== NULL && $var !== FALSE && $var !== '');
 }
