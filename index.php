@@ -113,12 +113,11 @@ print_r($img);
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
-  <img src="img/doudoune femme.jpg .jpg" style="width:100%">
+  <?php echo '<img src="img/'.$all_products[$i]['name'].'jpg" style="width:100%">';?>
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'$</p>';?></div>
   <div class="form">
                         <form class="login-form" action="cart_gestion/manage_cart.php" method="POST">
                         <input name="name" value="<?php $all_products[$i++]['name']?>">
-                        <input name="contentTwo" value="Mouse">
                         <input id = "login" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
@@ -131,7 +130,6 @@ print_r($img);
   <div class="form">
                         <form class="login-form" action="cart_gestion/manage_cart.php" method="POST">
                         <input name="name" value="<?php $all_products[$i++]['name']?>">
-                        <input name="contentTwo" value="Mouse">
                         <input id = "login" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>

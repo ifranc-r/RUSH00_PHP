@@ -32,5 +32,5 @@ function install_db(){
 	field_db_users();
 	field_db_products();
 }
-install_db_products();
+install_db();
 ?>
