@@ -63,13 +63,13 @@ if (isset($_POST['add']) == 'Ajouter un article'){
                     <div class="form">
                         <form class="login-form" action="#" method="POST">
                             <p>Nom de l'article : </p><input type="text" name="name">
-                            <p>Categories : </p>Homme<input type="checkbox" name="Homme" value="check">
-                            Femme<br><input type="checkbox" name="Femme" value="check"> 
-                            Chaussures<br><input type="checkbox" name="Chaussures" value="check">
-                            Vestes<br><input type="checkbox" name="Vestes" value="check">
-                            Pull <br><input type="checkbox" name="Pull" value="check">
+                            <p>Categories : </p>Homme<input type="checkbox" name="sexe" value="homme">
+                            Femme<br><input type="checkbox" name="sexe" value="femme"> 
+                            Chaussures<br><input type="checkbox" name="vetement" value="chaussure">
+                            Vestes<br><input type="checkbox" name="vetement" value="veste">
+                            Pull <br><input type="checkbox" name="vetement" value="pull">
                             <p>Prix de l'article : </p><input type="number" name="price" min="1" max="999">
-                            <p> Photo : </p>
+                            <!-- <p> Photo : </p> -->
                             <p>Description de l'article : </p><input type="text" name="desc">
 
                             <input id = "login" type="submit" name="add" value ="Ajouter un article">
@@ -78,5 +78,6 @@ if (isset($_POST['add']) == 'Ajouter un article'){
                 </div>
     </div>
 </div>
+
     </body>
 </html>                     
