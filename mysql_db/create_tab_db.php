@@ -24,6 +24,7 @@ function create_tab_products($conn)
 	  `price` double unsigned NOT NULL,
 	  `sexe` varchar(50) NOT NULL,
 	  `types` varchar(50) DEFAULT NULL,
+	  `describ` varchar(50) DEFAULT NULL,
 	  `picture` varchar(50) DEFAULT NULL,
 	  `stock` int(10) unsigned DEFAULT 10,
 	  PRIMARY KEY (`id`)
@@ -32,5 +33,17 @@ function create_tab_products($conn)
 	var_dump(mysqli_error($conn));
 }
 
-
+function create_tab_products($conn)
+{
+	$sql = "CREATE TABLE products (
+	  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+	  `user` varchar(100) NOT NULL,
+	  `adress` varchar(50) DEFAULT NULL,
+	  `email` varchar(50) DEFAULT NULL,
+	  `id_product` varchar(50) DEFAULT NULL
+	  PRIMARY KEY (`id`)
+	);";
+	$req = mysqli_query($conn, $sql);
+	var_dump(mysqli_error($conn));
+}
 ?>

@@ -19,8 +19,10 @@ function delete_user(){
 			if (mysqli_num_rows($result) == 1){
 				// create user on SQL line
 				$insert_user = "DELETE FROM table_name
-								WHERE [condition];";
+								WHERE $login;";
 				// apply SQL line on database
+				header('location: ../index.php');
+
 				if (mysqli_query($conn, $insert_user)){
 					echo ("User is deleted\n");
 					// send user to home page
