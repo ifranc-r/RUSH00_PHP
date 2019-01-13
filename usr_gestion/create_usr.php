@@ -1,10 +1,6 @@
 <?php
 require_once('../mysql_db/connect2db.php');
 
-function ft_is_null($var){
-	return ($var !== NULL && $var !== FALSE && $var !== '');
-}
-
 
 function create_usr(){
 	// connection to data
@@ -13,8 +9,7 @@ function create_usr(){
 		exit ("Connection failed: " . mysqli_connect_error());
 	}
 	// check Post correct
-	print_r($_POST);
-	if ($_POST["submit"] == "Creer un compte" && ft_is_null($_POST["login"]) && ft_is_null($_POST["password"])){
+	if ($_POST["submit"] == "Creer un compte" && $_POST["login"] && $_POST["password"]){
 		// create var of user and pass
 		list($login, $password) = array($_POST["login"], $_POST["password"]);
 		// SQL check line for check
