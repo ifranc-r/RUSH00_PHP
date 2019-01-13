@@ -4,8 +4,6 @@ include ("create_tab_db.php");
 include ("db_function.php");
 include ("connect2db.php");
 
-
-
 function connect_2_mysql()
 {
 	$username_db = "inti";
@@ -27,7 +25,7 @@ function main(){
 	$conn = connect_2_mysql();
 	delete_db($conn, $db);
 	create_db($conn, $db);
-	$con_to_db = connecte2data($db);
+	$con_to_db = connecte2data();
 	create_tab_usr($con_to_db);
 	create_tab_products($con_to_db);
 }
