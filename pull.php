@@ -97,44 +97,36 @@ $i = 0;
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
                         <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
-                        <input name="name" value="<?php $cat[$i]['name']; $i++?>">
+                        <input type="hidden" name="name" value="<?php echo $cat[$i]['name']; $i++?>">
                         <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
+                                
                                 </div>
 </div>
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-                                </div>
-                            
-
-<div class="slideshow-container">
 <div class="mySlides fade">
   <?php echo '<img class = "img_index" src="'.$cat[$i]['picture'].'" alt="'.$cat[$i]['picture'].'">';?>
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
                         <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
-                        <input name="name" value="<?php $cat[$i]['name']; $i++?>">
+                        <input type="hidden" name="name" value="<?php echo $cat[$i]['name']; $i++?>">
                         <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
 </div>
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-                                </div>
 
-<div class="slideshow-container">
 <div class="mySlides fade">
   <?php echo '<img class = "img_index" src="'.$cat[$i]['picture'].'" alt="'.$cat[$i]['picture'].'">';?>
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
                         <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
-                        <input name="name" value="<?php $cat[$i]['name']; $i++?>">
+                        <input type="hidden" name="name" value="<?php echo $cat[$i]['name']; $i++?>">
                         <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
 </div>
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
                                 </div>
     <script src="slideshow.js"></script>
     <script>

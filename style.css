@@ -157,13 +157,19 @@ h1 {
 }
 
 .form {
-	position: relative;
+	position: absolute;
 	z-index: 1;
 	background: #FFFFFF;
 	max-width: 360px;
 	margin: 0 auto 100px;
 	padding: 45px;
 	text-align: center;
+}
+.form-pict {
+	width:25vw;
+	height: 25vh;
+	padding: 8% 0 0;
+	margin: auto;
 }
 
 .form input {
@@ -220,13 +226,15 @@ h1 {
   
 /* Slideshow container */
 .slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
+    width: 15vw;
+    height : 22vh;
+    position: absolute;
   }
-
-.mySlides {
-  display: none;
+.img_index {
+    width:100%;
+}
+.mySlides fade {
+    width: 100%;
 }
 
 .prev, .next {
@@ -353,4 +361,10 @@ h1 {
 	margin: 15px 0 0;
 	color: #b3b3b3;
 	font-size: 12px;
+}
+
+
+#welcome{
+    font-size:3vh;
+    text-align:center;
 }

@@ -2,32 +2,28 @@
 session_start();
 require_once('./mysql_db/connect2db.php');
 function get_all_product(){
-	$conn = connecte2data();
-	if (!$conn)
-		exit ("Connection failed: " . mysqli_connect_error());
-	$sql = "SELECT * FROM products";
-	// check if user exist
-	if ($result = mysqli_query($conn, $sql)){
-		if (mysqli_num_rows($result) > 0) {
-			$all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
-			return $all_products;
-		} 
-		else {
-			echo "0 products in database\n";
-			return false;
-		}
-	}
-	else{
-		echo "error\n";
-		return false;
-	}
-	mysqli_free_result($result);
+    $conn = connecte2data();
+    if (!$conn) {
+        exit("Connection failed: " . mysqli_connect_error());
+    }
+    $sql = "SELECT * FROM products";
+    if ($result = mysqli_query($conn, $sql)) {
+        if (mysqli_num_rows($result) > 0) {
+            $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            return $all_products;
+        } else {
+            echo "0 products in database\n";
+            return false;
+        }
+    }
+    else {
+        echo "error\n";
+        return false;
+    }
+    mysqli_free_result($result);
 }
 $all_products = get_all_product();
 $i = 0;
-if (!isset($cat)) {
-    $cat = 0;
-}
 ?>
 
 <!DOCTYPE html>
@@ -41,6 +37,7 @@ if (!isset($cat)) {
 </head>
 <body>
     <div id="top_bar">
+    <p id= "welcome">Bienvenue !</p>
     <div class="header">
                             <ul class="menu">
                                 <li class="dropdown"><span>Mon compte</span>
@@ -93,43 +90,36 @@ if (!isset($cat)) {
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
                         <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
+                        <input type ="hidden" name="name" value="<?php $all_products[$i]['name']; $i++;?>">
+                        <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
+                                </form>
+                                </div>
+</div>
+
+
+<div class="mySlides fade">
+  <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
+  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
+  <div class="form">
+                        <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
+                        <input name="name" value="<?php $all_products[$i]['name'];?>">
+                        <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
+                                </form>
+                                </div>
+</div>
+
+<div class="mySlides fade">
+  <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
+  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
+  <div class="form">
+                        <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
                         <input name="name" value="<?php $all_products[$i]['name']; $i++?>">
                         <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
 </div>
-                                </div>
-                                </div>
-
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-</div>
-
-<div class="slideshow-container">
-<div class="mySlides fade">
-  <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
-  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
-  <div class="form">
-                        <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
-                        <input name="name" value="<?php $all_products[$i]['name']; $i++?>">
-                        <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
-                                </form>
-                                </div>
-</div>
-                                </div>
-
-<div class="slideshow-container">
-<div class="mySlides fade">
-  <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
-  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
-  <div class="form">
-                        <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
-                        <input name="name" value="<?php $all_products[$i]['name']; $i++?>">
-                        <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
-                                </form>
-                                </div>
-</div>
                                 </div>
                                 <div class="slideshow-container">
 <div class="mySlides fade">
@@ -143,9 +133,7 @@ if (!isset($cat)) {
                                 </form>
                                 </div>
 </div>
-                                </div>
 
-<div class="slideshow-container">
 <div class="mySlides fade">
   <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
@@ -156,9 +144,7 @@ if (!isset($cat)) {
                                 </form>
                                 </div>
 </div>
-                                </div>
-
-<div class="slideshow-container">
+                        
 <div class="mySlides fade">
   <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
@@ -169,6 +155,8 @@ if (!isset($cat)) {
                                 </form>
                                 </div>
 </div>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
                                 </div><div class="slideshow-container">
 <div class="mySlides fade">
 
@@ -181,9 +169,7 @@ if (!isset($cat)) {
                                 </form>
                                 </div>
 </div>
-                                </div>
-
-<div class="slideshow-container">
+                              
 <div class="mySlides fade">
   <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
@@ -194,9 +180,6 @@ if (!isset($cat)) {
                                 </form>
                                 </div>
 </div>
-                                </div>
-
-<div class="slideshow-container">
 <div class="mySlides fade">
   <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
@@ -206,7 +189,8 @@ if (!isset($cat)) {
                         <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
-</div>
+</div><a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
                                 </div><div class="slideshow-container">
 <div class="mySlides fade">
 
@@ -219,9 +203,7 @@ if (!isset($cat)) {
                                 </form>
                                 </div>
 </div>
-                                </div>
-
-<div class="slideshow-container">
+                            
 <div class="mySlides fade">
   <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
@@ -232,9 +214,7 @@ if (!isset($cat)) {
                                 </form>
                                 </div>
 </div>
-                                </div>
-
-<div class="slideshow-container">
+                             
 <div class="mySlides fade">
   <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
@@ -244,7 +224,8 @@ if (!isset($cat)) {
                         <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
-</div>
+</div><a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
                                 </div><div class="slideshow-container">
 <div class="mySlides fade">
 
@@ -257,9 +238,7 @@ if (!isset($cat)) {
                                 </form>
                                 </div>
 </div>
-                                </div>
-
-<div class="slideshow-container">
+                             
 <div class="mySlides fade">
   <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
@@ -270,9 +249,7 @@ if (!isset($cat)) {
                                 </form>
                                 </div>
 </div>
-                                </div>
-
-<div class="slideshow-container">
+                              
 <div class="mySlides fade">
   <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
   <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
@@ -282,7 +259,8 @@ if (!isset($cat)) {
                         <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
-</div>
+</div><a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
                                 </div>
 
     <script src="slideshow.js"></script>
