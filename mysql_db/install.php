@@ -20,7 +20,7 @@ function connect_2_mysql()
 	return $mysqli;
 }
 
-function main(){
+function install_db(){
 	$db = "db_rush00";
 	$conn = connect_2_mysql();
 	delete_db($conn, $db);
@@ -28,6 +28,7 @@ function main(){
 	$con_to_db = connecte2data();
 	create_tab_usr($con_to_db);
 	create_tab_products($con_to_db);
+	create_tab_orders($con_to_db);
 }
-main();
+install_db();
 ?>

@@ -18,12 +18,12 @@ function delete_user(){
 		if ($result = mysqli_query($conn, $check_pass)){
 			if (mysqli_num_rows($result) == 1){
 				// create user on SQL line
-				$insert_user = "DELETE FROM table_name
+				$del_user = "DELETE FROM table_name
 								WHERE $login;";
 				// apply SQL line on database
 				header('location: ../index.php');
 
-				if (mysqli_query($conn, $insert_user)){
+				if (mysqli_query($conn, $del_user)){
 					echo ("User is deleted\n");
 					// send user to home page
 					// header("Location: index.html")
