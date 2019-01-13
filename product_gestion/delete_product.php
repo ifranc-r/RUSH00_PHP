@@ -9,8 +9,7 @@ function delete_product($id){
 	$check_product = "SELECT * FROM products WHERE id='$id'";
 
  	if (mysqli_query($conn, $check_product)){
- 		$sql_del_product = "DELETE FROM products
-							WHERE id='$id'";
+ 		$sql_del_product = "DELETE FROM orders WHERE id=5 AND user='inti'";
 		if (mysqli_query($conn, $sql_del_product)){
 			echo ("Product is deleted\n");
 		}
