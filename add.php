@@ -1,4 +1,16 @@
-<!DOCTYPE html>
+<?php
+if (isset($_POST['add']) == 'Ajouter un article'){    
+    print_r($_POST);
+    echo $_POST['name'];
+    foreach ($_POST as $key => $val){
+        if (isset($key) && $key !== 'add'){
+            $to_add[$key] = $_POST[$key];
+        }
+    }
+    print_r($to_add);
+}
+?>
+<!DOCTYPE HTML>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -8,20 +20,21 @@
     href = "back.css" />
 </head>
 <body>
-        <div id="left-col">
+        <!-- <div id="left-col">
                 <a href="#">Categorie 1</a>
                 <a href="#">Categorie 2</a>
                 <a href="#">Categorie 3</a>
                 <a href="#">Categorie 4</a>
                 <a href="#">Categorie 5</a>
-        </div>
+                
+        </div> -->
     <div id="top_bar">
             <a href="index.html">Homepage</a>
     </div>
    
     <div id="full_body">
                     <div class="header">
-                            <ul class="menu">
+                             <ul class="menu">
                                 <li class="dropdown"><span>Mon compte</span>
                                     <ul class="features-menu">
                                         <li><a href="#">Voir mon compte</a></li>
@@ -45,26 +58,25 @@
                                 </li>
                             </ul>
                         </div>
-    
-    
-    
-    
     <div id="middle-col">
             <div class="login-page">
                     <div class="form">
-                        <form class="login-form" action="add.php" method="POST">
-                            <p>Nom de l'article : </p><input type="text" name="article"/>
-                            <p>Categories : </p><input type="checkbox" name="Categorie 1" value="Categorie 1"> Categorie 1<br>
-                            <input type="checkbox" name="Categorie 2" value="Categorie 2" checked="checked"> Categorie 2<br>
-                            <input type="checkbox" name="Categorie 3" value="Categorie 3"> Categorie 3<br>
-                            <input type="checkbox" name="Categorie 4" value="Categorie 4" checked="checked"> Categorie 4<br>
+                        <form class="login-form" action="#" method="POST">
+                            <p>Nom de l'article : </p><input type="text" name="name">
+                            <p>Categories : </p>Homme<input type="checkbox" name="Homme" value="check">
+                            Femme<br><input type="checkbox" name="Femme" value="check"> 
+                            Chaussures<br><input type="checkbox" name="Chaussures" value="check">
+                            Vestes<br><input type="checkbox" name="Vestes" value="check">
+                            Pull <br><input type="checkbox" name="Pull" value="check">
+                            <p>Prix de l'article : </p><input type="number" name="price" min="1" max="999">
+                            <p> Photo : </p>
+                            <p>Description de l'article : </p><input type="text" name="desc">
+
                             <input id = "login" type="submit" name="add" value ="Ajouter un article">
                         </form>
                     </div>
                 </div>
     </div>
-<!--     
-    <div id="right-col">
-    </div> -->
+</div>
     </body>
 </html>                     
