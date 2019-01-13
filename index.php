@@ -60,18 +60,24 @@ session_start();
   <div class="numbertext">1 / 3</div>
   <img src="img/basket femme rouge.jpg" style="width:100%">
   <div class="text">basket femme rouge</div>
+  <form class ="form_carousel" action="cart_gestion/manage_cart.php" method="POST"> Ajouter au panier: <input tabindex="1" page="document.getElementById("demo").innerHTML" name="quantity[]" min="0" max="5" type="number" class="quantity" value="1" /><br>
+                                </form>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
   <img src="img/chaussures femme beige.jpg" style="width:100%">
   <div class="text">chaussures femme beige</div>
+  <form class ="form_carousel" action="cart_gestion/manage_cart.php" method="POST"> Ajouter au panier: <input tabindex="1" name="quantity[]" min="0" max="5" type="number" class="quantity" value="1" /><br>
+                                </form>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 3</div>
   <img src="img/chaussures femme noir.jpg" style="width:100%">
   <div class="text">chaussures femme noir</div>
+  <form class ="form_carousel" action="cart_gestion/manage_cart.php" method="POST"> Ajouter au panier: <input tabindex="1" name="quantity[]" min="0" max="5" type="number" class="quantity" value="1" /><br>
+                                </form>
 </div>
 
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
