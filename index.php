@@ -25,6 +25,9 @@ function get_all_product(){
 }
 $all_products = get_all_product();
 $i = 0;
+if (!isset($cat)) {
+    $cat = 0;
+}
 ?>
 
 <!DOCTYPE html>
@@ -38,10 +41,7 @@ $i = 0;
 </head>
 <body>
     <div id="top_bar">
-    </div>
-    <div id="full_body">
-        
-                    <div class="header">
+    <div class="header">
                             <ul class="menu">
                                 <li class="dropdown"><span>Mon compte</span>
                                     <ul class="features-menu">
@@ -52,7 +52,11 @@ $i = 0;
                                 </li>
                                 <li class="dropdown"><span>Categories</span>
                                     <ul class="features-menu">
-                                        <li><a href="#">Hallu</a></li>
+                                        <li><a href="homme.php">Homme</a></li>
+                                        <li><a href="femme.php">Femme</a></li>
+                                        <li><a href="vestes.php">Vestes</a></li>
+                                        <li><a href="chaussures.php">Chaussures</a></li>
+                                        <li><a href="pull.php">Pull</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown"><span>Mon panier</span>
@@ -67,6 +71,10 @@ $i = 0;
                                 </ul>
                                 </li>
                         </div>
+    </div>
+    <div id="full_body">
+        
+                  
     
     
     <!-- <div id="left-col">
@@ -81,13 +89,12 @@ $i = 0;
 <!-- Slideshow container -->
 <div class="slideshow-container">
 <div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <?php echo '<img src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
-  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'$</p>';?></div>
+  <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
+  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
-                        <form class="login-form" action="cart_gestion/manage_cart.php" method="POST">
+                        <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
                         <input name="name" value="<?php $all_products[$i]['name']; $i++?>">
-                        <input id = "login" type="submit" name="add" value ="Ajouter au panier">
+                        <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
 </div>
@@ -95,13 +102,12 @@ $i = 0;
 
 <div class="slideshow-container">
 <div class="mySlides fade">
-  <div class="numbertext">2/ 3</div>
-  <?php echo '<img src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
-  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'$</p>';?></div>
+  <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
+  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
-                        <form class="login-form" action="cart_gestion/manage_cart.php" method="POST">
+                        <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
                         <input name="name" value="<?php $all_products[$i]['name']; $i++?>">
-                        <input id = "login" type="submit" name="add" value ="Ajouter au panier">
+                        <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
 </div>
@@ -109,30 +115,25 @@ $i = 0;
 
 <div class="slideshow-container">
 <div class="mySlides fade">
-  <div class="numbertext">3/ 3</div>
-  <?php echo '<img src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
-  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'$</p>';?></div>
+  <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
+  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
-                        <form class="login-form" action="cart_gestion/manage_cart.php" method="POST">
+                        <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
                         <input name="name" value="<?php $all_products[$i]['name']; $i++?>">
-                        <input id = "login" type="submit" name="add" value ="Ajouter au panier">
+                        <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
 </div>
                                 </div>
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
-<div class="slideshow-container">
+                                <div class="slideshow-container">
 <div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <?php echo '<img src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
-  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'$</p>';?></div>
+
+  <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
+  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
-                        <form class="login-form" action="cart_gestion/manage_cart.php" method="POST">
+                        <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
                         <input name="name" value="<?php $all_products[$i]['name']; $i++?>">
-                        <input id = "login" type="submit" name="add" value ="Ajouter au panier">
+                        <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
 </div>
@@ -140,13 +141,12 @@ $i = 0;
 
 <div class="slideshow-container">
 <div class="mySlides fade">
-  <div class="numbertext">2/ 3</div>
-  <?php echo '<img src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
-  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'$</p>';?></div>
+  <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
+  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
-                        <form class="login-form" action="cart_gestion/manage_cart.php" method="POST">
+                        <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
                         <input name="name" value="<?php $all_products[$i]['name']; $i++?>">
-                        <input id = "login" type="submit" name="add" value ="Ajouter au panier">
+                        <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
 </div>
@@ -154,30 +154,24 @@ $i = 0;
 
 <div class="slideshow-container">
 <div class="mySlides fade">
-  <div class="numbertext">3/ 3</div>
-  <?php echo '<img src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
-  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'$</p>';?></div>
+  <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
+  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
-                        <form class="login-form" action="cart_gestion/manage_cart.php" method="POST">
+                        <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
                         <input name="name" value="<?php $all_products[$i]['name']; $i++?>">
-                        <input id = "login" type="submit" name="add" value ="Ajouter au panier">
+                        <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
 </div>
-                                </div>
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
-<div class="slideshow-container">
+                                </div><div class="slideshow-container">
 <div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <?php echo '<img src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
-  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'$</p>';?></div>
+
+  <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
+  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
-                        <form class="login-form" action="cart_gestion/manage_cart.php" method="POST">
+                        <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
                         <input name="name" value="<?php $all_products[$i]['name']; $i++?>">
-                        <input id = "login" type="submit" name="add" value ="Ajouter au panier">
+                        <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
 </div>
@@ -185,13 +179,12 @@ $i = 0;
 
 <div class="slideshow-container">
 <div class="mySlides fade">
-  <div class="numbertext">2/ 3</div>
-  <?php echo '<img src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
-  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'$</p>';?></div>
+  <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
+  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
-                        <form class="login-form" action="cart_gestion/manage_cart.php" method="POST">
+                        <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
                         <input name="name" value="<?php $all_products[$i]['name']; $i++?>">
-                        <input id = "login" type="submit" name="add" value ="Ajouter au panier">
+                        <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
 </div>
@@ -199,30 +192,24 @@ $i = 0;
 
 <div class="slideshow-container">
 <div class="mySlides fade">
-  <div class="numbertext">3/ 3</div>
-  <?php echo '<img src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
-  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'$</p>';?></div>
+  <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
+  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
-                        <form class="login-form" action="cart_gestion/manage_cart.php" method="POST">
+                        <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
                         <input name="name" value="<?php $all_products[$i]['name']; $i++?>">
-                        <input id = "login" type="submit" name="add" value ="Ajouter au panier">
+                        <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
 </div>
-                                </div>
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
-<div class="slideshow-container">
+                                </div><div class="slideshow-container">
 <div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <?php echo '<img src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
-  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'$</p>';?></div>
+
+  <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
+  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
-                        <form class="login-form" action="cart_gestion/manage_cart.php" method="POST">
+                        <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
                         <input name="name" value="<?php $all_products[$i]['name']; $i++?>">
-                        <input id = "login" type="submit" name="add" value ="Ajouter au panier">
+                        <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
 </div>
@@ -230,13 +217,12 @@ $i = 0;
 
 <div class="slideshow-container">
 <div class="mySlides fade">
-  <div class="numbertext">2/ 3</div>
-  <?php echo '<img src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
-  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'$</p>';?></div>
+  <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
+  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
-                        <form class="login-form" action="cart_gestion/manage_cart.php" method="POST">
+                        <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
                         <input name="name" value="<?php $all_products[$i]['name']; $i++?>">
-                        <input id = "login" type="submit" name="add" value ="Ajouter au panier">
+                        <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
 </div>
@@ -244,30 +230,24 @@ $i = 0;
 
 <div class="slideshow-container">
 <div class="mySlides fade">
-  <div class="numbertext">3/ 3</div>
-  <?php echo '<img src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
-  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'$</p>';?></div>
+  <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
+  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
-                        <form class="login-form" action="cart_gestion/manage_cart.php" method="POST">
+                        <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
                         <input name="name" value="<?php $all_products[$i]['name']; $i++?>">
-                        <input id = "login" type="submit" name="add" value ="Ajouter au panier">
+                        <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
 </div>
-                                </div>
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
-<div class="slideshow-container">
+                                </div><div class="slideshow-container">
 <div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <?php echo '<img src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
-  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'$</p>';?></div>
+
+  <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
+  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
-                        <form class="login-form" action="cart_gestion/manage_cart.php" method="POST">
+                        <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
                         <input name="name" value="<?php $all_products[$i]['name']; $i++?>">
-                        <input id = "login" type="submit" name="add" value ="Ajouter au panier">
+                        <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
 </div>
@@ -275,13 +255,12 @@ $i = 0;
 
 <div class="slideshow-container">
 <div class="mySlides fade">
-  <div class="numbertext">2/ 3</div>
-  <?php echo '<img src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
-  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'$</p>';?></div>
+  <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
+  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
-                        <form class="login-form" action="cart_gestion/manage_cart.php" method="POST">
+                        <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
                         <input name="name" value="<?php $all_products[$i]['name']; $i++?>">
-                        <input id = "login" type="submit" name="add" value ="Ajouter au panier">
+                        <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
 </div>
@@ -289,21 +268,16 @@ $i = 0;
 
 <div class="slideshow-container">
 <div class="mySlides fade">
-  <div class="numbertext">3/ 3</div>
-  <?php echo '<img src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
-  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'$</p>';?></div>
+  <?php echo '<img class = "img_index" src="'.$all_products[$i]['picture'].'" alt="'.$all_products[$i]['picture'].'">';?>
+  <div class="text"><?php echo '<p class="article">'.$all_products[$i]['name'].'</p>';?></div>
   <div class="form">
-                        <form class="login-form" action="cart_gestion/manage_cart.php" method="POST">
+                        <form class="form-pict" action="cart_gestion/manage_cart.php" method="POST">
                         <input name="name" value="<?php $all_products[$i]['name']; $i++?>">
-                        <input id = "login" type="submit" name="add" value ="Ajouter au panier">
+                        <input id = "pict" type="submit" name="add" value ="Ajouter au panier">
                                 </form>
                                 </div>
 </div>
                                 </div>
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
 
     <script src="slideshow.js"></script>
     <script>

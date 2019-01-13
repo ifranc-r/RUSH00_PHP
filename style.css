@@ -218,10 +218,8 @@ h1 {
   ** SLIDESHOW
   */
   
-  * {box-sizing:border-box}
-
 .slideshow-container {
-  max-width: 5vw;
+  max-width: 2w;
   margin-top:20vh;
 }
 
@@ -234,11 +232,9 @@ h1 {
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -2vh;
-  padding: 16px;
   color: black;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 50px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -305,7 +301,54 @@ h1 {
 }
 
 .form_carousel {
-    width:2vw;
+    width:4vw;
+}
+
+.img_index {
+    margin-top:10vh;
+    margin-left: 25vw;
+    height: 30vh;
+    width: 20vw;
+}
+.article {
+    position: absolute;
+    font-size:3vh;
+    margin-top:6vh;
+    margin-left:30vw;
 }
 
 
+/*
+** FORM picture STYLE
+  */
+
+.form-pict input {
+	font-family: "Roboto", sans-serif;
+	outline: 0;
+	background: rgb(214, 213, 213);
+	width: 15vw;
+	border: 0;
+	padding: 15px;
+	box-sizing: border-box;
+    font-size: 14px;
+    margin-right:35vw;
+}
+.form #pict {
+	font-family: "Roboto", sans-serif;
+	text-transform: uppercase;
+	outline: 0;
+	background: lightskyblue;
+	width: 15vw;
+	border: 0;
+    padding: 15px;
+    margin-right:30vw;
+	color: #FFFFFF;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.form .message {
+	margin: 15px 0 0;
+	color: #b3b3b3;
+	font-size: 12px;
+}

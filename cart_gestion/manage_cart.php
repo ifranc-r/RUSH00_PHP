@@ -1,8 +1,6 @@
 <?php
 session_start();
 require_once('../mysql_db/connect2db.php');
-$path = $_POST['page'];
-header("location: $path");
 print_r($_POST);
 
 $conn = connecte2data();
