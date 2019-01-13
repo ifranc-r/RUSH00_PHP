@@ -32,7 +32,7 @@ session_start();
                                 </li>
                                 <li class="dropdown"><span>Mon panier</span>
                                     <ul class="features-menu">
-                                        <li><a href="cart.html">Voir mes articles</a></li>
+                                        <li><a href="my_cart.php">Voir mes articles</a></li>
                                         <li><a href="#">Commander</a></li>
                                     </ul>
                                 </li>
@@ -44,18 +44,51 @@ session_start();
                         </div>
     
     
-    <div id="left-col">
+    <!-- <div id="left-col">
             <a href="#">Categorie 1</a>
             <a href="#">Categorie 2</a>
             <a href="#">Categorie 3</a>
             <a href="#">Categorie 4</a>
             <a href="#">Categorie 5</a>
-    </div>
+    </div> -->
     
     <div id="middle-col">
-    </div>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="img/basket femme rouge.jpg" style="width:100%">
+  <div class="text">basket femme rouge</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="img/chaussures femme beige.jpg" style="width:100%">
+  <div class="text">chaussures femme beige</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="img/chaussures femme noir.jpg" style="width:100%">
+  <div class="text">chaussures femme noir</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+<span class="dot" onclick="currentSlide(1)"></span>
+<span class="dot" onclick="currentSlide(2)"></span>
+<span class="dot" onclick="currentSlide(3)"></span>
+</div> 
+</div>
 <!--     
     <div id="right-col">
     </div> -->
+    <script src="slideshow.js"></script>
     </body>
 </html>                     
