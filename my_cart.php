@@ -1,9 +1,8 @@
 <?php 
 session_start();
 require_once('./mysql_db/connect2db.php');
-
-if (!$conn) {
-    $conn = connecte2data();
+ $conn = connecte2data();
+if ($conn) {
     exit("Connection failed: " . mysqli_connect_error());
 }
 
