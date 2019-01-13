@@ -85,9 +85,9 @@ h1 {
   
   .header {
       position: fixed;
-      display: flex;
       justify-content: space-between;
       width: 95vw;
+      margin-top:5.1vh;
       padding: 2vh 1.3vw 2vh 1.3vw;
       border-radius:5px;
       background: #D6E9FE;
@@ -226,20 +226,17 @@ h1 {
   
 /* Slideshow container */
 .slideshow-container {
-    width: 15vw;
-    height : 22vh;
+    width: 30w;
+    height : 20vh;
     position: absolute;
   }
 .img_index {
     width:100%;
 }
-.mySlides fade {
-    width: 100%;
-}
+
 
 .prev, .next {
   cursor: pointer;
-  position: absolute;
   top: 50%;
   width: auto;
   color: black;
@@ -249,8 +246,15 @@ h1 {
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
-
+.prev {
+    position: absolute;
+    margin-top:10vh;
+    margin-left: 20vw;
+} 
 .next {
+    position: absolute;
+    margin-top:10vh;
+    margin-left: 45vw;
   right: 0;
   border-radius: 3px 0 0 3px;
 }
@@ -264,7 +268,8 @@ h1 {
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
+  margin-top:10vh;
+  margin-right:15vw;
   width: 100%;
   text-align: center;
 }
@@ -331,6 +336,10 @@ h1 {
 /*
 ** FORM picture STYLE
   */
+.form-pict {
+    text-align:center;
+    margin-left:25vw;
+  }
 
 .form-pict input {
 	font-family: "Roboto", sans-serif;
