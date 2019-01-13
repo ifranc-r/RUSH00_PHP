@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +22,7 @@
                                     <ul class="features-menu">
                                         <li><a href="login.html">Se connecter</a></li>
                                         <li><a href="#">Voir mon compte</a></li>
-                                        <li><a href="#">Se deconnecter</a></li>
+                                        <li><a href="usr_gestion/logout_usr.php">Se deconnecter</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown"><span>Categories</span>
@@ -32,7 +36,7 @@
                                         <li><a href="#">Commander</a></li>
                                     </ul>
                                 </li>
-                                <?php if ($_SESSION['admin'] === 1) : ?> {
+                                <?php if ($_SESSION['admin'] == 1) : ?> {
                                     <li class='dropdown'><span>Back-end</span><ul class='features-menu'><li><a href="back.html">Gestion admin</a></li></ul></li>
                                     <?php endif; ?>        
                                 </ul>
